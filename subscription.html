@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Subscriptions - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { trust: '#0F766E', trustHover: '#0D9488', dark: '#1F2937', surface: '#F9FAFB' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-dark font-sans pb-20">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer">
+                <div class="bg-trust text-white p-1.5 rounded flex items-center justify-center w-8 h-8">
+                    <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-dark mt-1">TruePhoneBD</span>
+            </div>
+            <a href="#" class="text-sm font-semibold text-gray-500 hover:text-dark transition">Go to Dashboard</a>
+        </div>
+    </header>
+
+    <main class="max-w-[1200px] mx-auto px-6 py-16">
+        
+        <!-- Hero Section -->
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-dark tracking-tight mb-4">Scale your mobile business</h1>
+            <p class="text-lg text-gray-500">Upgrade to a Pro Store to get the Verified Badge, list unlimited phones, and reach thousands of buyers daily.</p>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start max-w-5xl mx-auto">
+            
+            <!-- Basic Plan -->
+            <div class="bg-white rounded-3xl border border-gray-200 p-8 shadow-sm flex flex-col">
+                <h3 class="text-xl font-bold text-dark mb-1">Basic Seller</h3>
+                <p class="text-sm text-gray-500 mb-6">For individuals selling personal phones.</p>
+                <div class="mb-6">
+                    <span class="text-4xl font-extrabold text-dark">Free</span>
+                </div>
+                <button class="w-full bg-gray-100 hover:bg-gray-200 text-dark py-3.5 rounded-xl font-bold transition mb-8">
+                    Current Plan
+                </button>
+                <div class="space-y-4 text-sm text-gray-700 font-medium flex-1">
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> Up to 3 active listings</p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> Standard Escrow support</p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> NID Verification</p>
+                    <p class="flex items-center gap-3 text-gray-400"><i class="fa-solid fa-xmark text-gray-300 text-lg"></i> No Store Profile</p>
+                    <p class="flex items-center gap-3 text-gray-400"><i class="fa-solid fa-xmark text-gray-300 text-lg"></i> No Analytics Dashboard</p>
+                </div>
+            </div>
+
+            <!-- Pro Store Plan (Highlighted) -->
+            <div class="bg-white rounded-3xl border-2 border-trust p-8 shadow-xl flex flex-col relative transform md:-translate-y-4">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-trust text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">
+                    Most Popular
+                </div>
+                <h3 class="text-xl font-bold text-trust mb-1 flex items-center gap-2">Pro Store <i class="fa-solid fa-circle-check text-blue-500"></i></h3>
+                <p class="text-sm text-gray-500 mb-6">Perfect for standard mobile shops.</p>
+                <div class="mb-6 flex items-end gap-1">
+                    <span class="text-4xl font-extrabold text-dark">৳999</span>
+                    <span class="text-gray-500 text-sm mb-1 font-medium">/ month</span>
+                </div>
+                <button class="w-full bg-trust hover:bg-trustHover text-white py-3.5 rounded-xl font-bold shadow-md transition transform hover:-translate-y-0.5 mb-8">
+                    Upgrade to Pro
+                </button>
+                <div class="space-y-4 text-sm text-gray-700 font-medium flex-1">
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> <strong>Verified Store Badge</strong></p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> Up to 50 active listings</p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> Public Store Profile URL</p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> Advanced Sales Analytics</p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> Priority Customer Support</p>
+                </div>
+            </div>
+
+            <!-- Mega Store Plan -->
+            <div class="bg-white rounded-3xl border border-gray-200 p-8 shadow-sm flex flex-col">
+                <h3 class="text-xl font-bold text-dark mb-1">Mega Store</h3>
+                <p class="text-sm text-gray-500 mb-6">For large retailers & wholesalers.</p>
+                <div class="mb-6 flex items-end gap-1">
+                    <span class="text-4xl font-extrabold text-dark">৳2,499</span>
+                    <span class="text-gray-500 text-sm mb-1 font-medium">/ month</span>
+                </div>
+                <button class="w-full bg-white border-2 border-gray-200 hover:border-trust text-dark py-3.5 rounded-xl font-bold transition mb-8">
+                    Upgrade to Mega
+                </button>
+                <div class="space-y-4 text-sm text-gray-700 font-medium flex-1">
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> <strong>Unlimited Listings</strong></p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> Featured Homepage Placement</p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> CSV Bulk Upload Tool</p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> Dedicated Account Manager</p>
+                    <p class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500 text-lg"></i> All Pro Features</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Trust Note -->
+        <div class="mt-16 text-center text-sm text-gray-500">
+            <p><i class="fa-solid fa-shield-halved text-trust mr-1"></i> Trade License and NID verification is mandatory for all Store subscriptions. Payments are processed securely via SSLCommerz.</p>
+        </div>
+
+    </main>
+
+</body>
+</html>

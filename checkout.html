@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { trust: '#0F766E', dark: '#1F2937', surface: '#F9FAFB' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-dark font-sans pb-12">
+
+    <!-- Secure Header -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer">
+                <div class="bg-trust text-white p-1.5 rounded flex items-center justify-center w-8 h-8">
+                    <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-dark mt-1">TruePhoneBD</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm font-bold text-trust bg-teal-50 px-4 py-2 rounded-lg border border-teal-100">
+                <i class="fa-solid fa-lock"></i> Secure Checkout
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1200px] mx-auto px-6 py-10 flex flex-col lg:flex-row gap-8">
+        
+        <!-- Left Column: Delivery & Payment Details -->
+        <div class="flex-[2] space-y-6">
+            
+            <h1 class="text-2xl font-extrabold text-dark tracking-tight mb-2">Checkout Details</h1>
+            
+            <!-- Delivery Method -->
+            <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm">
+                <h2 class="text-lg font-bold text-dark mb-4">1. How do you want to receive it?</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label class="flex items-start gap-4 p-5 border-2 border-trust bg-teal-50 rounded-2xl cursor-pointer transition relative">
+                        <input type="radio" name="delivery" checked class="mt-1 text-trust focus:ring-trust w-4 h-4 accent-trust">
+                        <div>
+                            <p class="font-bold text-dark flex items-center gap-2">Secure Meetup <span class="bg-white text-trust text-[10px] px-2 py-0.5 rounded shadow-sm border border-teal-100 uppercase tracking-widest">Free</span></p>
+                            <p class="text-xs text-gray-500 mt-1">Meet the seller in person, check the phone, and approve payment.</p>
+                        </div>
+                    </label>
+                    <label class="flex items-start gap-4 p-5 border-2 border-gray-200 hover:border-trust/50 bg-white rounded-2xl cursor-pointer transition">
+                        <input type="radio" name="delivery" class="mt-1 text-trust focus:ring-trust w-4 h-4 accent-trust">
+                        <div>
+                            <p class="font-bold text-dark">TruePhone Delivery</p>
+                            <p class="text-xs text-gray-500 mt-1">We pick it up, inspect it, and deliver it to your address. (+৳150)</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Meetup Location (Shows if Meetup is selected) -->
+            <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm">
+                <h2 class="text-lg font-bold text-dark mb-4">2. Select Meetup Location</h2>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-500 shadow-sm">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-dark text-sm">Gadget Hub BD Store</p>
+                            <p class="text-xs text-gray-500">Bashundhara City, Level 5, Block B</p>
+                        </div>
+                    </div>
+                    <button class="text-trust font-semibold text-sm hover:underline">Change</button>
+                </div>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-circle-info mr-1"></i> We recommend meeting at the seller's verified store location for safety.</p>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm">
+                <h2 class="text-lg font-bold text-dark mb-4">3. Escrow Payment Method</h2>
+                <p class="text-sm text-gray-500 mb-6">Select how you want to fund the Escrow. The seller won't be paid until you approve the device.</p>
+                
+                <div class="space-y-3">
+                    <label class="flex items-center justify-between p-4 border border-gray-200 hover:border-trust rounded-xl cursor-pointer transition">
+                        <div class="flex items-center gap-3">
+                            <input type="radio" name="payment" class="text-trust focus:ring-trust w-4 h-4 accent-trust">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/BKash_Logo.svg/1024px-BKash_Logo.svg.png" class="h-6 object-contain" alt="bKash">
+                        </div>
+                        <span class="text-sm font-bold text-gray-700">bKash</span>
+                    </label>
+                    <label class="flex items-center justify-between p-4 border-2 border-trust bg-teal-50 rounded-xl cursor-pointer transition">
+                        <div class="flex items-center gap-3">
+                            <input type="radio" name="payment" checked class="text-trust focus:ring-trust w-4 h-4 accent-trust">
+                            <div class="flex gap-1">
+                                <i class="fa-brands fa-cc-visa text-2xl text-blue-700"></i>
+                                <i class="fa-brands fa-cc-mastercard text-2xl text-orange-500"></i>
+                            </div>
+                        </div>
+                        <span class="text-sm font-bold text-gray-700">Credit / Debit Card</span>
+                    </label>
+                </div>
+
+                <!-- Card Details Input -->
+                <div class="mt-4 bg-white border border-gray-200 p-5 rounded-xl">
+                    <div class="mb-4">
+                        <label class="block text-xs font-bold text-gray-600 mb-1 uppercase tracking-wider">Card Number</label>
+                        <div class="relative">
+                            <input type="text" placeholder="4321 5678 9123 0000" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2.5 outline-none focus:border-trust font-medium">
+                            <i class="fa-brands fa-cc-visa absolute right-3 top-2.5 text-xl text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1 uppercase tracking-wider">Expiry</label>
+                            <input type="text" placeholder="MM/YY" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2.5 outline-none focus:border-trust font-medium text-center">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1 uppercase tracking-wider">CVC</label>
+                            <input type="text" placeholder="123" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2.5 outline-none focus:border-trust font-medium text-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column: Order Summary (Sticky) -->
+        <div class="flex-1">
+            <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm sticky top-24">
+                <h2 class="text-xl font-bold text-dark mb-6">Order Summary</h2>
+                
+                <!-- Product Preview -->
+                <div class="flex gap-4 mb-6 pb-6 border-b border-gray-100">
+                    <div class="w-16 h-20 bg-gray-800 rounded-lg border-2 border-gray-700 flex-shrink-0"></div>
+                    <div>
+                        <h3 class="font-bold text-dark text-sm">Apple iPhone 14 Pro</h3>
+                        <p class="text-xs text-gray-500 mb-1">128GB • Deep Purple</p>
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-[10px] font-bold">Condition: Like New</span>
+                    </div>
+                </div>
+
+                <!-- Price Breakdown -->
+                <div class="space-y-3 mb-6 pb-6 border-b border-gray-100 text-sm font-medium text-gray-600">
+                    <div class="flex justify-between">
+                        <span>Device Price</span>
+                        <span class="font-bold text-dark">৳95,000</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>TruePhone Escrow Fee <i class="fa-solid fa-circle-question text-gray-400 text-[10px]"></i></span>
+                        <span class="font-bold text-dark">৳450</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Delivery (Meetup)</span>
+                        <span class="font-bold text-green-600">Free</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-end mb-8">
+                    <span class="font-bold text-gray-900">Total to Pay</span>
+                    <span class="text-3xl font-extrabold text-dark tracking-tight">৳95,450</span>
+                </div>
+
+                <!-- Trust Guarantee Box -->
+                <div class="bg-teal-50 border border-teal-100 rounded-xl p-4 mb-6 flex gap-3 items-start">
+                    <i class="fa-solid fa-shield-check text-trust text-lg mt-0.5"></i>
+                    <div>
+                        <p class="text-xs font-bold text-dark">Money Back Guarantee</p>
+                        <p class="text-[10px] text-gray-600 mt-1">If the phone doesn't match the description during inspection, your money is instantly refunded.</p>
+                    </div>
+                </div>
+
+                <button class="w-full bg-trust hover:bg-trustHover text-white py-4 rounded-xl font-bold text-lg shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-lock"></i> Pay Securely
+                </button>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

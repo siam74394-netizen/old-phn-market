@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Phones - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'Noto Sans Bengali', 'sans-serif'] },
+                    colors: {
+                        trust: '#0F766E',
+                        trustHover: '#0D9488',
+                        dark: '#1F2937',
+                        surface: '#F9FAFB'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { -webkit-font-smoothing: antialiased; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        /* Smooth scroll for the table wrapper */
+        .table-wrapper::-webkit-scrollbar { height: 8px; }
+        .table-wrapper::-webkit-scrollbar-track { background: #F3F4F6; border-radius: 8px; }
+        .table-wrapper::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 8px; }
+    </style>
+</head>
+<body class="bg-surface text-dark">
+
+    <!-- Premium Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-2 cursor-pointer">
+                <div class="bg-trust text-white p-2 rounded-lg flex items-center justify-center w-10 h-10">
+                    <i class="fa-solid fa-mobile-screen-button text-lg"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight text-dark mt-1">TruePhone<span class="text-trust">BD</span></span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-2 font-bold text-lg text-dark bg-gray-50 px-6 py-2 rounded-full border border-gray-200 shadow-sm">
+                <i class="fa-solid fa-code-compare text-trust"></i> Compare Devices
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-5 font-medium">
+                <button class="text-sm text-gray-500 hover:text-dark transition hidden lg:block border border-gray-200 px-3 py-1 rounded-md">বাংলা</button>
+                <button class="bg-gray-100 hover:bg-gray-200 text-dark px-5 py-2.5 rounded-lg shadow-sm transition-all font-semibold text-sm hidden md:block">
+                    Back to Search
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1440px] mx-auto px-6 py-10">
+        <div class="mb-6 flex justify-between items-end">
+            <div>
+                <h1 class="text-3xl font-extrabold text-dark tracking-tight">Compare Phones</h1>
+                <p class="text-gray-500 mt-2 text-sm font-medium">তুলনা করুন এবং আপনার জন্য সেরা ফোনটি বেছে নিন।</p>
+            </div>
+            <button class="text-trust font-bold hover:underline text-sm flex items-center gap-1">
+                <i class="fa-solid fa-trash-can"></i> Clear All
+            </button>
+        </div>
+
+        <!-- Comparison Table Container (Horizontal Scroll for Mobile) -->
+        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden table-wrapper overflow-x-auto relative">
+            <table class="w-full text-left min-w-[1000px] border-collapse">
+                
+                <!-- STICKY HEADER: Products & Actions -->
+                <thead class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-40">
+                    <tr>
+                        <!-- Placeholder Column -->
+                        <th class="w-1/5 p-6 border-r border-gray-200 bg-gray-50 align-bottom">
+                            <div class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Features</div>
+                            <label class="flex items-center gap-2 cursor-pointer text-xs font-medium text-gray-500">
+                                <input type="checkbox" checked class="w-4 h-4 text-trust rounded border-gray-300 focus:ring-trust">
+                                Highlight Differences
+                            </label>
+                        </th>
+                        
+                        <!-- Product 1 -->
+                        <th class="w-1/5 p-6 border-r border-gray-200 relative group align-top">
+                            <button class="absolute top-4 right-4 w-8 h-8 bg-gray-100 text-gray-400 rounded-full flex items-center justify-center hover:bg-red-50 hover:text-red-500 transition shadow-sm z-10"><i class="fa-solid fa-xmark"></i></button>
+                            <div class="h-32 w-full bg-gray-100 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden border border-gray-200">
+                                <div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded shadow-sm text-trust border border-gray-100">Verified Store</div>
+                                <div class="w-14 h-24 bg-gray-800 rounded-lg border-2 border-gray-700 shadow-md"></div>
+                            </div>
+                            <h3 class="font-bold text-lg text-dark mb-1 leading-tight">iPhone 14 Pro</h3>
+                            <p class="text-2xl font-extrabold text-dark tracking-tight mb-4">৳95,000</p>
+                            <button class="w-full bg-trust hover:bg-trustHover text-white py-2.5 rounded-lg font-bold text-sm shadow-sm transition">Buy Now</button>
+                        </th>
+
+                        <!-- Product 2 -->
+                        <th class="w-1/5 p-6 border-r border-gray-200 relative group align-top">
+                            <button class="absolute top-4 right-4 w-8 h-8 bg-gray-100 text-gray-400 rounded-full flex items-center justify-center hover:bg-red-50 hover:text-red-500 transition shadow-sm z-10"><i class="fa-solid fa-xmark"></i></button>
+                            <div class="h-32 w-full bg-gray-100 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden border border-gray-200">
+                                <div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded shadow-sm text-gray-600 border border-gray-100">Individual</div>
+                                <div class="w-14 h-24 bg-gray-300 rounded-lg border-2 border-gray-200 shadow-md"></div>
+                            </div>
+                            <h3 class="font-bold text-lg text-dark mb-1 leading-tight">Galaxy S23 Ultra</h3>
+                            <p class="text-2xl font-extrabold text-dark tracking-tight mb-4">৳98,000</p>
+                            <button class="w-full bg-trust hover:bg-trustHover text-white py-2.5 rounded-lg font-bold text-sm shadow-sm transition">Buy Now</button>
+                        </th>
+
+                        <!-- Product 3 -->
+                        <th class="w-1/5 p-6 border-r border-gray-200 relative group align-top">
+                            <button class="absolute top-4 right-4 w-8 h-8 bg-gray-100 text-gray-400 rounded-full flex items-center justify-center hover:bg-red-50 hover:text-red-500 transition shadow-sm z-10"><i class="fa-solid fa-xmark"></i></button>
+                            <div class="h-32 w-full bg-gray-100 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden border border-gray-200">
+                                <div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded shadow-sm text-gray-600 border border-gray-100">Individual</div>
+                                <div class="w-14 h-24 bg-gray-700 rounded-lg border-2 border-gray-600 shadow-md"></div>
+                            </div>
+                            <h3 class="font-bold text-lg text-dark mb-1 leading-tight">Google Pixel 7 Pro</h3>
+                            <p class="text-2xl font-extrabold text-dark tracking-tight mb-4">৳55,000</p>
+                            <button class="w-full bg-trust hover:bg-trustHover text-white py-2.5 rounded-lg font-bold text-sm shadow-sm transition">Buy Now</button>
+                        </th>
+
+                        <!-- Add Slot -->
+                        <th class="w-1/5 p-6 bg-gray-50 align-middle text-center border-b border-gray-200">
+                            <div class="border-2 border-dashed border-gray-300 rounded-2xl h-48 flex flex-col items-center justify-center gap-3 cursor-pointer hover:border-trust hover:bg-white transition group">
+                                <div class="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center shadow-sm group-hover:text-trust group-hover:shadow-md transition">
+                                    <i class="fa-solid fa-plus text-xl text-gray-400 group-hover:text-trust"></i>
+                                </div>
+                                <span class="font-bold text-gray-500 text-sm group-hover:text-trust">Add Phone</span>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody class="text-sm font-medium text-gray-700 divide-y divide-gray-200">
+                    
+                    <!-- GROUP: MARKETPLACE INFO -->
+                    <tr>
+                        <td colspan="5" class="bg-gray-100 px-6 py-3 font-bold text-gray-500 uppercase tracking-wider text-xs border-y border-gray-200 shadow-inner">Overview & Trust</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="px-6 py-4 bg-gray-50 text-gray-500 border-r border-gray-200">Condition Grade</td>
+                        <td class="px-6 py-4 border-r border-gray-200"><span class="bg-trust text-white px-2 py-1 rounded text-xs font-bold">Like New</span></td>
+                        <td class="px-6 py-4 border-r border-gray-200"><span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-bold">Excellent</span></td>
+                        <td class="px-6 py-4 border-r border-gray-200"><span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-bold">Good</span></td>
+                        <td class="bg-gray-50"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-6 py-4 bg-gray-50 text-gray-500 border-r border-gray-200">Seller Verification</td>
+                        <td class="px-6 py-4 border-r border-gray-200 text-blue-600 font-bold bg-blue-50/30"><i class="fa-solid fa-circle-check"></i> Verified Store (4.9 <i class="fa-solid fa-star text-yellow-400 text-xs"></i>)</td>
+                        <td class="px-6 py-4 border-r border-gray-200 text-gray-700"><i class="fa-solid fa-shield-check text-trust"></i> NID Verified (5.0 <i class="fa-solid fa-star text-yellow-400 text-xs"></i>)</td>
+                        <td class="px-6 py-4 border-r border-gray-200 text-gray-700"><i class="fa-solid fa-shield-check text-trust"></i> NID Verified (4.5 <i class="fa-solid fa-star text-yellow-400 text-xs"></i>)</td>
+                        <td class="bg-gray-50"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-6 py-4 bg-gray-50 text-gray-500 border-r border-gray-200">Warranty</td>
+                        <td class="px-6 py-4 border-r border-gray-200 bg-green-50/50 text-green-800 font-bold">7 Days Shop Warranty</td>
+                        <td class="px-6 py-4 border-r border-gray-200">None (Checking Warranty)</td>
+                        <td class="px-6 py-4 border-r border-gray-200">None (Checking Warranty)</td>
+                        <td class="bg-gray-50"></td>
+                    </tr>
+
+                    <!-- GROUP: CORE SPECS -->
+                    <tr>
+                        <td colspan="5" class="bg-gray-100 px-6 py-3 font-bold text-gray-500 uppercase tracking-wider text-xs border-y border-gray-200 shadow-inner">Core Specifications</td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-6 py-4 bg-gray-50 text-gray-500 border-r border-gray-200">RAM / Storage</td>
+                        <td class="px-6 py-4 border-r border-gray-200">6GB / 128GB</td>
+                        <td class="px-6 py-4 border-r border-gray-200 bg-green-50 text-green-800 font-bold">12GB / 256GB</td>
+                        <td class="px-6 py-4 border-r border-gray-200">12GB / 128GB</td>
+                        <td class="bg-gray-50"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-6 py-4 bg-gray-50 text-gray-500 border-r border-gray-200">Battery Health / Size</td>
+                        <td class="px-6 py-4 border-r border-gray-200">92% (3200 mAh)</td>
+                        <td class="px-6 py-4 border-r border-gray-200 bg-green-50 text-green-800 font-bold">96% (5000 mAh)</td>
+                        <td class="px-6 py-4 border-r border-gray-200 text-orange-600 font-bold bg-orange-50/30">85% (5000 mAh)</td>
+                        <td class="bg-gray-50"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="px-6 py-4 bg-gray-50 text-gray-500 border-r border-gray-200">Processor</td>
+                        <td class="px-6 py-4 border-r border-gray-200">Apple A16 Bionic (4 nm)</td>
+                        <td class="px-6 py-4 border-r border-gray-200">Snapdragon 8 Gen 2 (4 nm)</td>
+                        <td class="px-6 py-4 border-r border-gray-200">Google Tensor G2 (5 nm)</td>
+                        <td class="bg-gray-50"></td>
+                    </tr>
+
+                    <!-- GROUP: DISPLAY & CAMERA -->
+                    <tr>
+                        <td colspan="5" class="bg-gray-100 px-6 py-3 font-bold text-gray-500 uppercase tracking-wider text-xs border-y border-gray-200 shadow-inner">Display & Camera</td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-6 py-4 bg-gray-50 text-gray-500 border-r border-gray-200">Display Type & Size</td>
+                        <td class="px-6 py-4 border-r border-gray-200">6.1" LTPO Super Retina XDR OLED (120Hz)</td>
+                        <td class="px-6 py-4 border-r border-gray-200">6.8" Dynamic AMOLED 2X (120Hz)</td>
+                        <td class="px-6 py-4 border-r border-gray-200">6.7" LTPO AMOLED (120Hz)</td>
+                        <td class="bg-gray-50"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-6 py-4 bg-gray-50 text-gray-500 border-r border-gray-200">Main Camera</td>
+                        <td class="px-6 py-4 border-r border-gray-200">48MP (Wide) + 12MP (Tele) + 12MP (Ultrawide)</td>
+                        <td class="px-6 py-4 border-r border-gray-200 bg-green-50 text-green-800 font-bold">200MP (Wide) + 10MP (Tele) + 10MP (Periscope) + 12MP (Ultrawide)</td>
+                        <td class="px-6 py-4 border-r border-gray-200">50MP (Wide) + 48MP (Tele) + 12MP (Ultrawide)</td>
+                        <td class="bg-gray-50"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>

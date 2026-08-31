@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 14 Pro - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'Noto Sans Bengali', 'sans-serif'] },
+                    colors: {
+                        trust: '#0F766E', // Modern Teal
+                        trustHover: '#0D9488',
+                        dark: '#1F2937',
+                        surface: '#F9FAFB'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { -webkit-font-smoothing: antialiased; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-dark pb-20 lg:pb-0">
+
+    <!-- Premium Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-2 cursor-pointer">
+                <div class="bg-trust text-white p-2 rounded-lg flex items-center justify-center w-10 h-10">
+                    <i class="fa-solid fa-mobile-screen-button text-lg"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight text-dark mt-1">TruePhone<span class="text-trust">BD</span></span>
+            </div>
+
+            <!-- Header Search Bar -->
+            <div class="hidden md:flex flex-1 max-w-2xl mx-8 relative">
+                <input type="text" placeholder="Search brand, model, or IMEI..." 
+                       class="w-full bg-gray-100 border-transparent focus:bg-white focus:border-trust focus:ring-2 focus:ring-trust/20 rounded-xl py-2.5 pl-12 pr-4 transition-all outline-none font-medium">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-gray-500"></i>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-5 font-medium">
+                <button class="bg-gray-100 hover:bg-gray-200 text-dark px-5 py-2.5 rounded-lg shadow-sm transition-all font-semibold text-sm hidden md:block">
+                    Back to Search
+                </button>
+                <button class="bg-trust hover:bg-trustHover text-white px-6 py-2.5 rounded-lg shadow-sm transition-all font-semibold hidden md:block">
+                    Sell Phone
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-[1440px] mx-auto px-6 py-4 text-sm text-gray-500 flex items-center gap-2">
+        <a href="#" class="hover:text-trust transition">Home</a> <i class="fa-solid fa-chevron-right text-[10px]"></i> 
+        <a href="#" class="hover:text-trust transition">Apple</a> <i class="fa-solid fa-chevron-right text-[10px]"></i> 
+        <span class="text-dark font-medium">iPhone 14 Pro</span>
+    </div>
+
+    <!-- Product Layout -->
+    <main class="max-w-[1440px] mx-auto px-6 py-4 flex flex-col lg:flex-row gap-10">
+        
+        <!-- LEFT: Image Gallery Section -->
+        <div class="w-full lg:w-[45%] flex flex-col gap-4 sticky top-28 h-fit">
+            
+            <!-- Main Large Image -->
+            <div class="bg-white border border-gray-200 rounded-3xl h-[450px] lg:h-[550px] flex items-center justify-center p-8 relative overflow-hidden group cursor-zoom-in shadow-sm">
+                <!-- Badges -->
+                <div class="absolute top-4 left-4 flex flex-col gap-2 z-10">
+                    <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm flex items-center gap-1.5 border border-blue-200">
+                        <i class="fa-solid fa-shield-check"></i> Verified Inspected
+                    </span>
+                    <span class="bg-trust text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm self-start">
+                        Like New
+                    </span>
+                </div>
+                
+                <!-- Save Button -->
+                <button class="absolute top-4 right-4 w-10 h-10 bg-white border border-gray-200 text-gray-400 hover:text-red-500 rounded-full flex items-center justify-center shadow-sm transition z-10 hover:bg-gray-50">
+                    <i class="fa-regular fa-heart text-xl"></i>
+                </button>
+
+                <!-- Phone Mockup Image Placeholder -->
+                <div class="w-56 h-96 bg-gray-900 rounded-[2.5rem] border-[6px] border-gray-800 shadow-2xl relative">
+                    <!-- Notch / Dynamic Island details -->
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-4 bg-black rounded-full"></div>
+                </div>
+            </div>
+
+            <!-- Thumbnail Navigation -->
+            <div class="grid grid-cols-5 gap-3">
+                <div class="bg-white border-2 border-trust rounded-xl h-20 lg:h-24 flex items-center justify-center cursor-pointer shadow-sm relative overflow-hidden">
+                    <div class="w-8 h-14 bg-gray-900 rounded border border-gray-700"></div>
+                </div>
+                <div class="bg-white border border-gray-200 hover:border-trust rounded-xl h-20 lg:h-24 flex items-center justify-center cursor-pointer transition">
+                    <div class="w-8 h-14 bg-gray-800 rounded border border-gray-600 opacity-80"></div>
+                </div>
+                <div class="bg-white border border-gray-200 hover:border-trust rounded-xl h-20 lg:h-24 flex items-center justify-center cursor-pointer transition">
+                    <span class="text-xs font-medium text-gray-500">Side View</span>
+                </div>
+                <div class="bg-white border border-gray-200 hover:border-trust rounded-xl h-20 lg:h-24 flex items-center justify-center cursor-pointer transition">
+                    <span class="text-xs font-medium text-gray-500">Camera</span>
+                </div>
+                <div class="bg-white border border-gray-200 hover:border-trust rounded-xl h-20 lg:h-24 flex items-center justify-center cursor-pointer transition">
+                    <span class="text-xs font-medium text-gray-500">Box</span>
+                </div>
+            </div>
+            
+            <p class="text-xs text-center text-gray-400 mt-2"><i class="fa-solid fa-circle-info mr-1"></i> These are actual photos of the device taken by the seller.</p>
+        </div>
+
+        <!-- RIGHT: Product Details & Actions -->
+        <div class="w-full lg:w-[55%] flex flex-col gap-6">
+            
+            <!-- Core Details Box -->
+            <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-200 shadow-sm">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md text-xs font-bold tracking-wide">APPLE</span>
+                    <span class="text-gray-400 text-sm">•</span>
+                    <span class="text-gray-500 text-sm font-medium">Posted 2 hours ago</span>
+                </div>
+                
+                <h1 class="text-3xl lg:text-4xl font-extrabold text-dark mb-4 tracking-tight">Apple iPhone 14 Pro (128GB)</h1>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-gray-50 border border-gray-200 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Deep Purple</span>
+                    <span class="bg-gray-50 border border-gray-200 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Single SIM</span>
+                    <span class="bg-gray-50 border border-gray-200 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-semibold">5G Network</span>
+                </div>
+                
+                <!-- Pricing Area -->
+                <div class="bg-gray-50 border border-gray-100 p-5 rounded-2xl flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+                    <div>
+                        <p class="text-sm font-medium text-gray-500 mb-1">Fixed Price</p>
+                        <div class="flex items-end gap-3">
+                            <p class="text-4xl lg:text-5xl font-extrabold text-dark tracking-tight">৳95,000</p>
+                        </div>
+                    </div>
+                    <div class="text-right flex sm:flex-col items-center sm:items-end gap-3 sm:gap-1">
+                        <p class="text-sm text-gray-400 line-through">Market New: ৳135,000</p>
+                        <div class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded flex items-center gap-1">
+                            <i class="fa-solid fa-arrow-trend-down"></i> Save ৳40,000
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Primary Actions -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <button class="bg-trust hover:bg-trustHover text-white py-4 rounded-xl font-bold text-lg transition flex items-center justify-center gap-2 shadow-md transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-shield-halved"></i> Buy with Escrow
+                    </button>
+                    <div class="flex gap-4">
+                        <button class="flex-1 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 py-4 rounded-xl font-bold transition flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-comment-dots text-lg"></i> Chat
+                        </button>
+                        <button class="flex-1 bg-white hover:bg-gray-50 text-dark border border-gray-200 py-4 rounded-xl font-bold transition flex items-center justify-center gap-2">
+                            Offer
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Escrow Note -->
+                <div class="mt-5 flex items-start gap-3 p-3 bg-teal-50/50 rounded-xl border border-teal-100/50">
+                    <i class="fa-solid fa-lock text-trust mt-0.5"></i>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        <strong class="text-dark">Secure Escrow Protection.</strong> Your money is held safely by TruePhone until you receive and verify the phone in person. <a href="#" class="text-trust hover:underline font-medium">Learn more</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Seller Trust Box -->
+            <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-200 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer hover:border-blue-300 transition group">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center font-bold text-2xl border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition">
+                        G
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-medium mb-0.5 uppercase tracking-wide">Seller Profile</p>
+                        <h3 class="font-bold text-lg text-dark flex items-center gap-2 leading-tight">
+                            Gadget Hub BD <i class="fa-solid fa-circle-check text-blue-500 text-sm" title="Verified Store"></i>
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1"><i class="fa-solid fa-location-dot text-gray-400 mr-1"></i> Bashundhara City, Level 5, Block B</p>
+                    </div>
+                </div>
+                <div class="sm:text-right w-full sm:w-auto bg-gray-50 sm:bg-transparent p-3 sm:p-0 rounded-lg">
+                    <p class="font-extrabold text-dark text-lg flex items-center sm:justify-end gap-1">
+                        <i class="fa-solid fa-star text-yellow-400"></i> 4.9 
+                        <span class="text-sm font-medium text-gray-500 underline ml-1 cursor-pointer">(142)</span>
+                    </p>
+                    <p class="text-xs text-gray-500 mt-1">100+ Phones Sold • Quick Reply</p>
+                </div>
+            </div>
+
+            <!-- Condition Report (Cashify Style) -->
+            <div class="bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden">
+                <div class="bg-gray-50 border-b border-gray-200 p-6 flex justify-between items-center">
+                    <h3 class="font-bold text-xl text-dark">AI Condition Report</h3>
+                    <span class="bg-blue-100 text-blue-800 border border-blue-200 px-3 py-1 rounded-full text-sm font-bold shadow-sm">
+                        Grade: Like New
+                    </span>
+                </div>
+                
+                <div class="p-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                        <!-- Report Item -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium">Display</p>
+                                <p class="font-bold text-dark">Flawless</p>
+                                <p class="text-xs text-gray-400 mt-0.5">No scratches or dead pixels</p>
+                            </div>
+                        </div>
+                        <!-- Report Item -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-battery-full"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium">Battery Health</p>
+                                <p class="font-bold text-dark">92% Capacity</p>
+                                <p class="text-xs text-gray-400 mt-0.5">Original battery, never replaced</p>
+                            </div>
+                        </div>
+                        <!-- Report Item -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-yellow-50 text-yellow-600 rounded-full flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-mobile"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium">Body / Frame</p>
+                                <p class="font-bold text-dark">Minor wear</p>
+                                <p class="text-xs text-gray-400 mt-0.5">Slight color fade on charging port</p>
+                            </div>
+                        </div>
+                        <!-- Report Item -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-wrench"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium">Repair History</p>
+                                <p class="font-bold text-dark">Never Repaired</p>
+                                <p class="text-xs text-gray-400 mt-0.5">All parts are 100% original</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Damage Disclosure Warning -->
+                    <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-xl flex gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-yellow-600 mt-0.5 text-lg"></i>
+                        <div>
+                            <p class="text-sm font-bold text-yellow-800">Seller Disclosure</p>
+                            <p class="text-sm text-yellow-700 mt-1">There is a very microscopic hairline scratch near the volume button. It is barely visible unless held under direct light. Phone works 100% perfectly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What's in the box -->
+            <div class="bg-white p-6 lg:p-8 rounded-3xl border border-gray-200 shadow-sm mb-10">
+                <h3 class="font-bold text-xl text-dark mb-4">What's included?</h3>
+                <ul class="grid grid-cols-2 gap-y-3">
+                    <li class="flex items-center gap-2 text-gray-700 font-medium">
+                        <i class="fa-solid fa-check text-green-500"></i> Original Device
+                    </li>
+                    <li class="flex items-center gap-2 text-gray-700 font-medium">
+                        <i class="fa-solid fa-check text-green-500"></i> Original Box
+                    </li>
+                    <li class="flex items-center gap-2 text-gray-700 font-medium">
+                        <i class="fa-solid fa-check text-green-500"></i> Type-C to Lightning Cable
+                    </li>
+                    <li class="flex items-center gap-2 text-gray-400 font-medium line-through">
+                        <i class="fa-solid fa-xmark"></i> Power Adapter
+                    </li>
+                    <li class="flex items-center gap-2 text-gray-700 font-medium">
+                        <i class="fa-solid fa-check text-green-500"></i> Spigen Back Cover (Free)
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Mobile Fixed Action Bar (Visible only on small screens) -->
+    <div class="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 flex gap-3 z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+        <button class="flex-1 bg-blue-50 text-blue-700 border border-blue-200 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+            <i class="fa-regular fa-comment-dots text-lg"></i> Chat
+        </button>
+        <button class="flex-[2] bg-trust text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 shadow-md">
+            Buy Now
+        </button>
+    </div>
+
+</body>
+</html>

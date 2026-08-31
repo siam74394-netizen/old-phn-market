@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Management - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { trust: '#0F766E', dark: '#111827', surface: '#F3F4F6' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-gray-800 font-sans flex h-screen overflow-hidden">
+
+    <!-- Dark Enterprise Sidebar -->
+    <aside class="w-64 bg-dark text-gray-300 flex flex-col flex-shrink-0 h-full">
+        <!-- Brand -->
+        <div class="h-16 flex items-center px-6 border-b border-gray-700 bg-gray-900">
+            <i class="fa-solid fa-mobile-screen-button text-trust text-xl mr-2"></i>
+            <span class="text-xl font-bold text-white tracking-tight">TruePhone<span class="text-trust">Pro</span></span>
+        </div>
+        
+        <!-- Store Info -->
+        <div class="px-6 py-6 border-b border-gray-800">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-lg">G</div>
+                <div>
+                    <h3 class="font-bold text-white leading-tight flex items-center gap-1">Gadget Hub <i class="fa-solid fa-circle-check text-blue-400 text-[10px]"></i></h3>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-wider">Verified Store</p>
+                </div>
+            </div>
+            <a href="#" class="text-xs text-trust hover:text-white transition block mt-2">View Public Profile <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-800 text-white font-medium">
+                <i class="fa-solid fa-chart-pie w-5"></i> Dashboard
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-boxes-stacked w-5"></i> Inventory <span class="ml-auto bg-gray-700 text-xs py-0.5 px-2 rounded-full">45</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-money-bill-transfer w-5"></i> Sales & Orders
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-regular fa-message w-5"></i> Customer Messages <span class="ml-auto bg-red-500 text-white text-xs py-0.5 px-2 rounded-full">5</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-chart-line w-5"></i> Analytics
+            </a>
+            
+            <div class="pt-4 pb-2">
+                <p class="px-3 text-xs font-bold text-gray-500 uppercase tracking-wider">Settings</p>
+            </div>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-store w-5"></i> Store Profile
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-regular fa-credit-card w-5"></i> Subscription & Billing
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col h-full overflow-hidden">
+        
+        <!-- Topbar -->
+        <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8 flex-shrink-0 shadow-sm">
+            <div class="relative w-96">
+                <input type="text" placeholder="Search IMEI, SKU, or Phone model..." class="w-full bg-gray-100 border-transparent rounded-lg py-2 pl-10 pr-4 text-sm focus:border-trust focus:bg-white focus:ring-2 focus:ring-trust/20 outline-none transition">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-2.5 text-gray-400"></i>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button class="bg-gray-100 hover:bg-gray-200 text-dark px-4 py-2 rounded-lg text-sm font-semibold transition border border-gray-200">
+                    <i class="fa-solid fa-file-csv mr-1"></i> Bulk Upload
+                </button>
+                <button class="bg-trust hover:bg-trustHover text-white px-5 py-2 rounded-lg text-sm font-bold shadow-sm transition flex items-center gap-2">
+                    <i class="fa-solid fa-plus"></i> Add Listing
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Main Dashboard -->
+        <main class="flex-1 overflow-y-auto p-8">
+            
+            <div class="mb-8">
+                <h1 class="text-2xl font-bold text-gray-900">Store Overview</h1>
+                <p class="text-sm text-gray-500">Track your inventory and marketplace performance.</p>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <p class="text-sm font-semibold text-gray-500 mb-1">Total Active Stock</p>
+                    <p class="text-3xl font-extrabold text-gray-900">45</p>
+                    <p class="text-xs text-gray-400 mt-2">Valued at ~৳18.5M</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <p class="text-sm font-semibold text-gray-500 mb-1">Monthly GMV</p>
+                    <p class="text-3xl font-extrabold text-gray-900">৳850K</p>
+                    <p class="text-xs text-green-600 font-bold mt-2"><i class="fa-solid fa-arrow-trend-up"></i> +12% from last month</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <p class="text-sm font-semibold text-gray-500 mb-1">Avg. Sell Time</p>
+                    <p class="text-3xl font-extrabold text-gray-900">4.2 <span class="text-lg text-gray-400">Days</span></p>
+                    <p class="text-xs text-green-600 font-bold mt-2">Faster than market average</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <p class="text-sm font-semibold text-gray-500 mb-1">Total Profile Views</p>
+                    <p class="text-3xl font-extrabold text-gray-900">12.4K</p>
+                    <p class="text-xs text-blue-600 font-bold mt-2">Promoted store status active</p>
+                </div>
+            </div>
+
+            <!-- Inventory Data Table -->
+            <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex flex-col">
+                <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center bg-gray-50">
+                    <h2 class="text-lg font-bold text-gray-900">Active Inventory Management</h2>
+                    <select class="bg-white border border-gray-200 rounded-lg text-sm px-3 py-1.5 outline-none font-medium text-gray-700">
+                        <option>Status: All</option>
+                        <option>Active</option>
+                        <option>Pending</option>
+                        <option>Sold</option>
+                    </select>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-white text-xs uppercase tracking-wider text-gray-500 border-b border-gray-200">
+                            <tr>
+                                <th class="px-6 py-4 font-bold">Product</th>
+                                <th class="px-6 py-4 font-bold">SKU / IMEI</th>
+                                <th class="px-6 py-4 font-bold">Condition</th>
+                                <th class="px-6 py-4 font-bold">Price</th>
+                                <th class="px-6 py-4 font-bold text-center">Inquiries</th>
+                                <th class="px-6 py-4 font-bold text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-sm">
+                            
+                            <!-- Row 1 -->
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-gray-100 rounded border border-gray-200 flex items-center justify-center text-gray-400">
+                                            <i class="fa-solid fa-mobile-screen"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold text-gray-900">iPhone 14 Pro Max</p>
+                                            <p class="text-xs text-gray-500">256GB • Deep Purple</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-mono text-gray-700 text-xs">SKU-A14PM-256</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">352495******123</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-blue-100 text-blue-700 px-2.5 py-1 rounded-md text-xs font-bold">Like New</span>
+                                </td>
+                                <td class="px-6 py-4 font-extrabold text-gray-900">৳105,000</td>
+                                <td class="px-6 py-4 text-center font-bold text-gray-700">12</td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-gray-400 hover:text-trust transition mr-2" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="text-gray-400 hover:text-red-500 transition" title="Mark as Sold"><i class="fa-solid fa-check"></i></button>
+                                </td>
+                            </tr>
+
+                            <!-- Row 2 -->
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-gray-100 rounded border border-gray-200 flex items-center justify-center text-gray-400">
+                                            <i class="fa-solid fa-mobile-screen"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold text-gray-900">Samsung Galaxy S23 Ultra</p>
+                                            <p class="text-xs text-gray-500">12GB/256GB • Phantom Black</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-mono text-gray-700 text-xs">SKU-S23U-BLK</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">358129******456</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-green-100 text-green-700 px-2.5 py-1 rounded-md text-xs font-bold">Excellent</span>
+                                </td>
+                                <td class="px-6 py-4 font-extrabold text-gray-900">৳98,000</td>
+                                <td class="px-6 py-4 text-center font-bold text-gray-700">8</td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-gray-400 hover:text-trust transition mr-2" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="text-gray-400 hover:text-red-500 transition" title="Mark as Sold"><i class="fa-solid fa-check"></i></button>
+                                </td>
+                            </tr>
+
+                            <!-- Row 3 -->
+                            <tr class="hover:bg-gray-50 transition bg-yellow-50/30">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-gray-100 rounded border border-gray-200 flex items-center justify-center text-gray-400">
+                                            <i class="fa-solid fa-mobile-screen"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold text-gray-900">iPhone 12 Pro</p>
+                                            <p class="text-xs text-gray-500">128GB • Pacific Blue</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-mono text-gray-700 text-xs">SKU-A12P-128</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">352881******789</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-yellow-100 text-yellow-700 px-2.5 py-1 rounded-md text-xs font-bold">Good</span>
+                                </td>
+                                <td class="px-6 py-4 font-extrabold text-gray-900">৳48,500</td>
+                                <td class="px-6 py-4 text-center font-bold text-gray-700">24</td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-gray-400 hover:text-trust transition mr-2" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="text-gray-400 hover:text-red-500 transition" title="Mark as Sold"><i class="fa-solid fa-check"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="px-6 py-4 border-t border-gray-200 bg-white flex items-center justify-between">
+                    <p class="text-sm text-gray-500">Showing 3 of 45 products</p>
+                    <div class="flex gap-1">
+                        <button class="px-3 py-1 border border-gray-300 rounded text-sm font-medium text-gray-600 bg-gray-50">Prev</button>
+                        <button class="px-3 py-1 border border-trust rounded text-sm font-medium text-white bg-trust shadow-sm">1</button>
+                        <button class="px-3 py-1 border border-gray-300 rounded text-sm font-medium text-gray-600 hover:bg-gray-50">2</button>
+                        <button class="px-3 py-1 border border-gray-300 rounded text-sm font-medium text-gray-600 hover:bg-gray-50">Next</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

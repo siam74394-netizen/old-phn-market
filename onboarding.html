@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalize - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { trust: '#0F766E', dark: '#1F2937', surface: '#F9FAFB' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-dark h-screen flex flex-col items-center justify-center p-6">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2 mb-8">
+        <div class="bg-trust text-white p-2 rounded-lg flex items-center justify-center w-8 h-8">
+            <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-dark mt-1">TruePhone<span class="text-trust">BD</span></span>
+    </div>
+
+    <!-- Onboarding Card -->
+    <div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-200 shadow-xl w-full max-w-2xl relative overflow-hidden">
+        
+        <!-- Progress Bar -->
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-gray-100">
+            <div class="h-full bg-trust w-1/2"></div>
+        </div>
+
+        <div class="text-center mb-10 mt-2">
+            <h2 class="text-2xl font-extrabold text-dark tracking-tight mb-2">Personalize your experience</h2>
+            <p class="text-gray-500 text-sm">Tell us what you're looking for so we can show you the best deals.</p>
+        </div>
+
+        <!-- Section 1: Intent -->
+        <div class="mb-8">
+            <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">What is your primary goal?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <label class="relative flex flex-col items-center p-5 border-2 border-trust bg-teal-50 rounded-2xl cursor-pointer transition">
+                    <input type="radio" name="goal" class="absolute top-4 right-4 text-trust focus:ring-trust w-4 h-4 accent-trust" checked>
+                    <i class="fa-solid fa-bag-shopping text-3xl text-trust mb-3"></i>
+                    <span class="font-bold text-dark">Buy a Phone</span>
+                    <span class="text-xs text-gray-500 mt-1">Find the best used deals</span>
+                </label>
+                <label class="relative flex flex-col items-center p-5 border-2 border-gray-200 bg-white hover:border-trust/50 rounded-2xl cursor-pointer transition">
+                    <input type="radio" name="goal" class="absolute top-4 right-4 text-trust focus:ring-trust w-4 h-4 accent-trust">
+                    <i class="fa-solid fa-tags text-3xl text-gray-400 mb-3"></i>
+                    <span class="font-bold text-dark">Sell My Phone</span>
+                    <span class="text-xs text-gray-500 mt-1">List your phone for cash</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Section 2: Preferred Brands -->
+        <div class="mb-8">
+            <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Favorite Brands (Select multiple)</h3>
+            <div class="flex flex-wrap gap-3">
+                <div class="px-5 py-2.5 bg-dark text-white rounded-full font-semibold text-sm cursor-pointer border-2 border-dark shadow-sm">Apple</div>
+                <div class="px-5 py-2.5 bg-white border-2 border-gray-200 text-gray-600 rounded-full font-semibold text-sm cursor-pointer hover:border-gray-300 transition">Samsung</div>
+                <div class="px-5 py-2.5 bg-white border-2 border-gray-200 text-gray-600 rounded-full font-semibold text-sm cursor-pointer hover:border-gray-300 transition">Google Pixel</div>
+                <div class="px-5 py-2.5 bg-white border-2 border-gray-200 text-gray-600 rounded-full font-semibold text-sm cursor-pointer hover:border-gray-300 transition">Xiaomi</div>
+                <div class="px-5 py-2.5 bg-white border-2 border-gray-200 text-gray-600 rounded-full font-semibold text-sm cursor-pointer hover:border-gray-300 transition">OnePlus</div>
+            </div>
+        </div>
+
+        <!-- Section 3: Budget Range -->
+        <div class="mb-10">
+            <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Your Budget</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="text-center py-2 border-2 border-gray-200 rounded-lg text-sm font-medium text-gray-600 cursor-pointer hover:border-trust">Under ৳20k</div>
+                <div class="text-center py-2 border-2 border-trust bg-teal-50 rounded-lg text-sm font-bold text-trust cursor-pointer">৳20k - ৳40k</div>
+                <div class="text-center py-2 border-2 border-gray-200 rounded-lg text-sm font-medium text-gray-600 cursor-pointer hover:border-trust">৳40k - ৳70k</div>
+                <div class="text-center py-2 border-2 border-gray-200 rounded-lg text-sm font-medium text-gray-600 cursor-pointer hover:border-trust">Above ৳70k</div>
+            </div>
+        </div>
+
+        <button class="w-full bg-trust hover:bg-trustHover text-white py-4 rounded-xl font-bold text-lg shadow-md transition transform hover:-translate-y-0.5">
+            Continue to Marketplace <i class="fa-solid fa-arrow-right ml-2"></i>
+        </button>
+        <button class="w-full text-center text-gray-400 font-medium text-sm mt-4 hover:text-dark transition">
+            Skip for now
+        </button>
+
+    </div>
+
+</body>
+</html>

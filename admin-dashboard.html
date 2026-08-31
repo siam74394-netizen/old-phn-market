@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Admin - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { trust: '#0F766E', dark: '#0F172A', surface: '#F8FAFC' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-gray-800 font-sans flex h-screen overflow-hidden">
+
+    <!-- Dark Enterprise Sidebar (Platform Admin) -->
+    <aside class="w-64 bg-dark text-gray-300 flex flex-col flex-shrink-0 h-full">
+        <!-- Brand -->
+        <div class="h-16 flex items-center px-6 border-b border-gray-800 bg-[#0B1120]">
+            <i class="fa-solid fa-shield-halved text-trust text-xl mr-2"></i>
+            <span class="text-lg font-bold text-white tracking-tight">TruePhone <span class="text-gray-400 font-medium">Admin</span></span>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="flex-1 px-3 py-6 space-y-1 overflow-y-auto">
+            <p class="px-3 text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Core</p>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-800/50 text-white font-medium border border-gray-700/50">
+                <i class="fa-solid fa-chart-line w-5 text-gray-400"></i> Platform Overview
+            </a>
+            
+            <p class="px-3 text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-6 mb-2">Moderation</p>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-list-check w-5 text-gray-400"></i> Pending Listings <span class="ml-auto bg-orange-500 text-white text-xs py-0.5 px-2 rounded-full font-bold">12</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-id-card-clip w-5 text-gray-400"></i> Verifications <span class="ml-auto bg-blue-500 text-white text-xs py-0.5 px-2 rounded-full font-bold">5</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-flag w-5 text-red-400"></i> Fraud & Reports <span class="ml-auto bg-red-500 text-white text-xs py-0.5 px-2 rounded-full font-bold">3</span>
+            </a>
+
+            <p class="px-3 text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-6 mb-2">Management</p>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-users w-5 text-gray-400"></i> Users & Sellers
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-store w-5 text-gray-400"></i> Verified Stores
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-800 hover:text-white font-medium transition">
+                <i class="fa-solid fa-money-bill-transfer w-5 text-gray-400"></i> Escrow Transactions
+            </a>
+        </nav>
+
+        <!-- Admin Profile -->
+        <div class="p-4 border-t border-gray-800 bg-[#0B1120] flex items-center gap-3">
+            <div class="w-8 h-8 bg-trust rounded-full flex items-center justify-center text-white font-bold text-sm">S</div>
+            <div>
+                <p class="text-sm font-bold text-white">Super Admin</p>
+                <p class="text-[10px] text-gray-400">Trust & Safety Team</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col h-full overflow-hidden">
+        
+        <!-- Topbar -->
+        <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8 flex-shrink-0">
+            <h2 class="text-lg font-bold text-gray-800">Trust & Safety Operations</h2>
+            <div class="flex items-center gap-4">
+                <div class="bg-red-50 text-red-600 border border-red-200 px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-2 shadow-sm">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
+                    System Health: 3 Alerts
+                </div>
+            </div>
+        </header>
+
+        <!-- Scrollable Main Dashboard -->
+        <main class="flex-1 overflow-y-auto p-8 bg-surface">
+            
+            <!-- Global Platform Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-t-4 border-t-blue-500">
+                    <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Total Active Listings</p>
+                    <p class="text-2xl font-extrabold text-gray-900">4,250</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-t-4 border-t-trust">
+                    <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Escrow Volume (30D)</p>
+                    <p class="text-2xl font-extrabold text-gray-900">৳12.5M</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-t-4 border-t-orange-500">
+                    <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Pending Verifications</p>
+                    <p class="text-2xl font-extrabold text-gray-900">18</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-t-4 border-t-red-500 bg-red-50/10">
+                    <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Reported Scams / Fraud</p>
+                    <p class="text-2xl font-extrabold text-red-600">3</p>
+                </div>
+            </div>
+
+            <!-- Moderation Queue Table -->
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden flex flex-col mb-8">
+                <div class="px-6 py-4 border-b border-gray-200 bg-gray-50 flex justify-between items-center">
+                    <h2 class="text-base font-bold text-gray-900 flex items-center gap-2">
+                        <i class="fa-solid fa-robot text-trust"></i> AI Moderation Queue
+                    </h2>
+                    <span class="bg-gray-200 text-gray-700 text-xs font-bold px-2.5 py-1 rounded">Needs Manual Review</span>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-white text-xs uppercase tracking-wider text-gray-500 border-b border-gray-200">
+                            <tr>
+                                <th class="px-6 py-4 font-bold">Listing Details</th>
+                                <th class="px-6 py-4 font-bold">Seller</th>
+                                <th class="px-6 py-4 font-bold">AI Flag Reason</th>
+                                <th class="px-6 py-4 font-bold text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-sm">
+                            
+                            <!-- Alert Row 1 (Price too low) -->
+                            <tr class="hover:bg-gray-50 transition bg-orange-50/20">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-16 bg-gray-200 rounded border border-gray-300"></div>
+                                        <div>
+                                            <p class="font-bold text-gray-900">iPhone 14 Pro Max</p>
+                                            <p class="text-xs font-bold text-gray-900 mt-0.5">৳30,000 <span class="text-red-500 line-through text-[10px] ml-1">Market: ৳95k</span></p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-bold text-gray-800 text-xs">Unverified User</p>
+                                    <p class="text-[10px] text-gray-500 mt-0.5">Account age: 2 hours</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold border border-red-200 flex items-center gap-1 w-fit">
+                                        <i class="fa-solid fa-triangle-exclamation"></i> Unrealistic Price Drop
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 px-3 py-1.5 rounded text-xs font-bold mr-2 shadow-sm transition">Review</button>
+                                    <button class="bg-red-50 border border-red-200 text-red-600 hover:bg-red-100 px-3 py-1.5 rounded text-xs font-bold shadow-sm transition">Ban User</button>
+                                </td>
+                            </tr>
+
+                            <!-- Alert Row 2 (Condition mismatch) -->
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-16 bg-gray-800 rounded border border-gray-700"></div>
+                                        <div>
+                                            <p class="font-bold text-gray-900">Samsung Galaxy S22</p>
+                                            <p class="text-xs font-bold text-gray-900 mt-0.5">৳45,000</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-bold text-gray-800 text-xs flex items-center gap-1">Mobile BD <i class="fa-solid fa-circle-check text-blue-500"></i></p>
+                                    <p class="text-[10px] text-gray-500 mt-0.5">Verified Store</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-bold border border-orange-200 flex items-center gap-1 w-fit">
+                                        <i class="fa-solid fa-image"></i> AI detected cracked screen
+                                    </span>
+                                    <p class="text-[10px] text-gray-500 mt-1">Seller listed as "Like New"</p>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 px-3 py-1.5 rounded text-xs font-bold mr-2 shadow-sm transition">View Photos</button>
+                                    <button class="bg-gray-100 border border-gray-300 text-gray-700 hover:bg-gray-200 px-3 py-1.5 rounded text-xs font-bold shadow-sm transition">Reject Listing</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

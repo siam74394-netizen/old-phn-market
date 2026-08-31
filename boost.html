@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boost Listing - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { trust: '#0F766E', dark: '#1F2937', surface: '#F9FAFB' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-dark font-sans pb-16">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-[1000px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer">
+                <div class="bg-trust text-white p-1.5 rounded flex items-center justify-center w-8 h-8">
+                    <i class="fa-solid fa-rocket text-sm"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-dark mt-1">Boost Listing</span>
+            </div>
+            <a href="#" class="text-sm font-semibold text-gray-500 hover:text-dark transition"><i class="fa-solid fa-xmark text-lg"></i></a>
+        </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-6 py-10 flex flex-col md:flex-row gap-10">
+        
+        <!-- Left: Boost Packages -->
+        <div class="flex-[3]">
+            <h1 class="text-2xl font-extrabold text-dark tracking-tight mb-2">Sell your phone 5x faster!</h1>
+            <p class="text-gray-500 mb-8 text-sm">Push your listing to the top of the search results and homepage to reach more buyers instantly.</p>
+            
+            <div class="space-y-4 mb-8">
+                
+                <!-- Package 1 -->
+                <label class="flex items-center justify-between p-5 border border-gray-200 hover:border-trust rounded-2xl cursor-pointer transition bg-white shadow-sm">
+                    <div class="flex items-center gap-4">
+                        <input type="radio" name="boost_pkg" class="text-trust focus:ring-trust w-5 h-5 accent-trust">
+                        <div>
+                            <p class="font-bold text-dark flex items-center gap-2"><i class="fa-solid fa-bolt text-yellow-500 text-lg"></i> 24 Hours Boost</p>
+                            <p class="text-xs text-gray-500 mt-1">Stays at the top for 1 full day.</p>
+                        </div>
+                    </div>
+                    <span class="text-xl font-extrabold text-dark">৳99</span>
+                </label>
+
+                <!-- Package 2 (Recommended) -->
+                <label class="flex items-center justify-between p-5 border-2 border-trust bg-teal-50 rounded-2xl cursor-pointer transition relative shadow-md">
+                    <div class="absolute -top-3 right-6 bg-trust text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest shadow-sm">
+                        Best Value
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <input type="radio" name="boost_pkg" checked class="text-trust focus:ring-trust w-5 h-5 accent-trust">
+                        <div>
+                            <p class="font-bold text-trust flex items-center gap-2"><i class="fa-solid fa-fire text-orange-500 text-lg"></i> 3 Days Boost</p>
+                            <p class="text-xs text-teal-800 mt-1">Get maximum views over the weekend.</p>
+                        </div>
+                    </div>
+                    <span class="text-xl font-extrabold text-trust">৳199</span>
+                </label>
+
+                <!-- Package 3 -->
+                <label class="flex items-center justify-between p-5 border border-gray-200 hover:border-trust rounded-2xl cursor-pointer transition bg-white shadow-sm">
+                    <div class="flex items-center gap-4">
+                        <input type="radio" name="boost_pkg" class="text-trust focus:ring-trust w-5 h-5 accent-trust">
+                        <div>
+                            <p class="font-bold text-dark flex items-center gap-2"><i class="fa-solid fa-gem text-blue-500 text-lg"></i> 7 Days Max Visibility</p>
+                            <p class="text-xs text-gray-500 mt-1">For high-end premium phones.</p>
+                        </div>
+                    </div>
+                    <span class="text-xl font-extrabold text-dark">৳349</span>
+                </label>
+            </div>
+
+            <!-- Payment Methods -->
+            <h3 class="font-bold text-dark mb-4">Select Payment Method</h3>
+            <div class="flex gap-4">
+                <label class="flex-1 flex flex-col items-center justify-center p-4 border border-gray-200 hover:border-trust bg-white rounded-xl cursor-pointer transition gap-2">
+                    <input type="radio" name="payment" checked class="hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/BKash_Logo.svg/1024px-BKash_Logo.svg.png" class="h-8 object-contain" alt="bKash">
+                </label>
+                <label class="flex-1 flex flex-col items-center justify-center p-4 border border-gray-200 hover:border-trust bg-white rounded-xl cursor-pointer transition gap-2 opacity-60">
+                    <input type="radio" name="payment" class="hidden">
+                    <div class="flex gap-2">
+                        <i class="fa-brands fa-cc-visa text-3xl text-blue-700"></i>
+                        <i class="fa-brands fa-cc-mastercard text-3xl text-orange-500"></i>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Right: Target Listing Preview & Summary -->
+        <div class="flex-[2]">
+            <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm sticky top-6">
+                <h3 class="font-bold text-dark mb-4 text-sm uppercase tracking-wider text-gray-500">Listing Preview</h3>
+                
+                <!-- The Phone Card -->
+                <div class="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden mb-6 relative">
+                    <!-- Boost Badge Preview -->
+                    <div class="absolute top-2 left-2 bg-yellow-100 text-yellow-700 text-[10px] font-bold px-2 py-1 rounded border border-yellow-200 flex items-center gap-1 z-10">
+                        <i class="fa-solid fa-bolt"></i> Sponsored
+                    </div>
+
+                    <div class="h-32 flex justify-center items-center p-4 border-b border-gray-200 bg-white">
+                        <div class="w-12 h-24 bg-gray-800 rounded-lg border-2 border-gray-700"></div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-dark text-sm mb-1 truncate">Apple iPhone 14 Pro</h4>
+                        <p class="text-2xl font-extrabold text-dark tracking-tight mb-2">৳95,000</p>
+                        <span class="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded font-bold">Like New</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center mb-6">
+                    <span class="font-medium text-gray-600">Total to Pay</span>
+                    <span class="text-2xl font-extrabold text-trust tracking-tight">৳199</span>
+                </div>
+
+                <button class="w-full bg-trust hover:bg-trustHover text-white py-4 rounded-xl font-bold text-lg shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-rocket"></i> Pay & Boost Listing
+                </button>
+                <p class="text-center text-[10px] text-gray-400 mt-4">Secure payment via SSLCommerz Gateway.</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition & Photos - Step 2 - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { trust: '#0F766E', dark: '#1F2937', surface: '#F9FAFB' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-dark min-h-screen pb-12">
+
+    <!-- Simple Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-[1000px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer">
+                <div class="bg-trust text-white p-1.5 rounded flex items-center justify-center w-8 h-8">
+                    <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-dark mt-1">TruePhoneBD</span>
+            </div>
+            <button class="text-sm font-semibold text-gray-500 hover:text-dark transition">Save & Exit</button>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-[1000px] mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex flex-col w-1/4 relative">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Step 1</span>
+                <span class="text-sm font-bold text-gray-500 flex items-center gap-1"><i class="fa-solid fa-check text-trust"></i> Device</span>
+                <div class="absolute -bottom-4 left-0 w-full h-1 bg-trust"></div>
+            </div>
+            <div class="flex flex-col w-1/4 relative">
+                <span class="text-xs font-bold text-trust uppercase tracking-wider mb-2">Step 2 & 3</span>
+                <span class="text-sm font-bold text-dark">Condition & Photos</span>
+                <div class="absolute -bottom-4 left-0 w-full h-1 bg-trust rounded-r-full"></div>
+            </div>
+            <div class="flex flex-col w-1/4 opacity-40 text-right">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Step 4</span>
+                <span class="text-sm font-bold text-gray-700">Price</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-3xl mx-auto px-6 py-12">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h1 class="text-3xl font-extrabold text-dark tracking-tight mb-2">Device Condition</h1>
+                <p class="text-gray-500">Be honest. Accurate descriptions sell 3x faster.</p>
+            </div>
+            <div class="hidden md:block bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg text-sm font-bold border border-blue-200">
+                <i class="fa-solid fa-robot"></i> AI will verify photos
+            </div>
+        </div>
+
+        <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm mb-6 space-y-8">
+            
+            <!-- Functional Issues -->
+            <div>
+                <h3 class="font-bold text-dark mb-4">1. Does the phone turn on and function normally?</h3>
+                <div class="flex gap-4">
+                    <label class="flex-1 border-2 border-trust bg-teal-50 rounded-xl p-4 cursor-pointer text-center transition">
+                        <input type="radio" name="func" checked class="hidden">
+                        <span class="font-bold text-trust text-lg">Yes</span>
+                    </label>
+                    <label class="flex-1 border-2 border-gray-200 hover:border-gray-300 rounded-xl p-4 cursor-pointer text-center transition">
+                        <input type="radio" name="func" class="hidden">
+                        <span class="font-bold text-gray-600 text-lg">No / Has Issues</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Screen Condition -->
+            <div>
+                <h3 class="font-bold text-dark mb-4">2. Screen Condition</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <label class="border-2 border-gray-200 hover:border-trust rounded-xl p-4 cursor-pointer transition relative">
+                        <input type="radio" name="screen" class="absolute top-4 right-4 text-trust focus:ring-trust w-4 h-4 accent-trust">
+                        <p class="font-bold text-dark mb-1">Flawless</p>
+                        <p class="text-xs text-gray-500">No scratches, looks brand new.</p>
+                    </label>
+                    <label class="border-2 border-trust bg-teal-50 rounded-xl p-4 cursor-pointer transition relative">
+                        <input type="radio" name="screen" checked class="absolute top-4 right-4 text-trust focus:ring-trust w-4 h-4 accent-trust">
+                        <p class="font-bold text-dark mb-1">Minor Scratches</p>
+                        <p class="text-xs text-gray-500">Light wear, visible under light.</p>
+                    </label>
+                    <label class="border-2 border-gray-200 hover:border-trust rounded-xl p-4 cursor-pointer transition relative">
+                        <input type="radio" name="screen" class="absolute top-4 right-4 text-trust focus:ring-trust w-4 h-4 accent-trust">
+                        <p class="font-bold text-dark mb-1">Cracked / Dead Pixels</p>
+                        <p class="text-xs text-gray-500">Visible cracks, lines, or spots.</p>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Battery Health -->
+            <div>
+                <h3 class="font-bold text-dark mb-4">3. Battery Health (%)</h3>
+                <input type="number" value="89" class="w-full md:w-1/3 bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-lg font-bold outline-none focus:border-trust focus:ring-2 focus:ring-trust/20 transition">
+            </div>
+
+        </div>
+
+        <!-- Photos Section -->
+        <h2 class="text-2xl font-extrabold text-dark tracking-tight mb-2 mt-12">Upload Photos</h2>
+        <p class="text-gray-500 mb-6">Upload at least 4 clear photos. Blurry photos will be rejected.</p>
+
+        <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm mb-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                
+                <!-- Upload Slot 1 (Uploaded) -->
+                <div class="relative h-40 rounded-xl border-2 border-trust overflow-hidden group">
+                    <div class="absolute inset-0 bg-gray-900"></div> <!-- Placeholder for image -->
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <button class="text-white text-sm font-bold"><i class="fa-solid fa-trash-can"></i> Remove</button>
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-trust text-white text-[10px] font-bold px-2 py-0.5 rounded">Front Screen</div>
+                </div>
+
+                <!-- Upload Slot 2 (Empty) -->
+                <div class="h-40 rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center cursor-pointer hover:border-trust hover:bg-teal-50/50 transition">
+                    <i class="fa-solid fa-camera text-2xl text-gray-400 mb-2"></i>
+                    <span class="text-sm font-bold text-gray-600">Back Panel</span>
+                </div>
+
+                <!-- Upload Slot 3 (Empty) -->
+                <div class="h-40 rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center cursor-pointer hover:border-trust hover:bg-teal-50/50 transition">
+                    <i class="fa-solid fa-camera text-2xl text-gray-400 mb-2"></i>
+                    <span class="text-sm font-bold text-gray-600">Left & Right Edges</span>
+                </div>
+
+                <!-- Upload Slot 4 (Empty) -->
+                <div class="h-40 rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center cursor-pointer hover:border-trust hover:bg-teal-50/50 transition">
+                    <i class="fa-solid fa-camera text-2xl text-gray-400 mb-2"></i>
+                    <span class="text-sm font-bold text-gray-600">Top & Bottom Edges</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center">
+            <button class="text-gray-500 font-bold hover:text-dark">Back</button>
+            <button class="bg-trust hover:bg-trustHover text-white px-8 py-3.5 rounded-xl font-bold text-lg shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                Analyze & Next <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+    </main>
+
+</body>
+</html>

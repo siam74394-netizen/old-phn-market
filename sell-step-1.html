@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Phone - Step 1 - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { trust: '#0F766E', dark: '#1F2937', surface: '#F9FAFB' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-dark min-h-screen">
+
+    <!-- Simple Header -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-[1000px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer">
+                <div class="bg-trust text-white p-1.5 rounded flex items-center justify-center w-8 h-8">
+                    <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-dark mt-1">TruePhoneBD</span>
+            </div>
+            <button class="text-sm font-semibold text-gray-500 hover:text-dark">Cancel</button>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-[1000px] mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex flex-col w-1/4 relative">
+                <span class="text-xs font-bold text-trust uppercase tracking-wider mb-2">Step 1</span>
+                <span class="text-sm font-bold text-dark">Device</span>
+                <div class="absolute -bottom-4 left-0 w-full h-1 bg-trust rounded-r-full"></div>
+            </div>
+            <div class="flex flex-col w-1/4 opacity-40">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Step 2</span>
+                <span class="text-sm font-bold text-gray-700">Condition</span>
+            </div>
+            <div class="flex flex-col w-1/4 opacity-40">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Step 3</span>
+                <span class="text-sm font-bold text-gray-700">Photos</span>
+            </div>
+            <div class="flex flex-col w-1/4 opacity-40 text-right">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Step 4</span>
+                <span class="text-sm font-bold text-gray-700">Price</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-6 py-12">
+        
+        <h1 class="text-3xl font-extrabold text-dark tracking-tight mb-2">What are you selling?</h1>
+        <p class="text-gray-500 mb-8">Select your device model and specifications.</p>
+
+        <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm mb-6">
+            
+            <!-- Quick IMEI Fetch (Smart Feature) -->
+            <div class="mb-8 p-4 bg-gray-50 border border-gray-200 rounded-2xl flex flex-col md:flex-row items-center gap-4">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-trust shadow-sm border border-gray-100 shrink-0">
+                    <i class="fa-solid fa-bolt text-xl"></i>
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h3 class="font-bold text-dark text-sm">Fastest Way: Enter IMEI</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">Dial *#06# on your phone to find it. We'll auto-fill the specs.</p>
+                </div>
+                <div class="flex w-full md:w-auto">
+                    <input type="text" placeholder="Enter 15-digit IMEI" class="w-full md:w-48 bg-white border border-gray-300 rounded-l-lg px-4 py-2 text-sm outline-none focus:border-trust font-medium">
+                    <button class="bg-dark hover:bg-black text-white px-4 py-2 rounded-r-lg font-semibold text-sm transition">Fetch</button>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px bg-gray-200 flex-1"></div>
+                <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">OR SELECT MANUALLY</span>
+                <div class="h-px bg-gray-200 flex-1"></div>
+            </div>
+
+            <!-- Brand Selection -->
+            <div class="mb-8">
+                <label class="block text-sm font-bold text-gray-700 mb-3">1. Select Brand</label>
+                <div class="grid grid-cols-3 md:grid-cols-5 gap-3">
+                    <div class="border-2 border-trust bg-teal-50 rounded-xl p-3 flex flex-col items-center justify-center gap-2 cursor-pointer transition">
+                        <i class="fa-brands fa-apple text-2xl text-dark"></i>
+                        <span class="text-xs font-bold text-trust">Apple</span>
+                    </div>
+                    <div class="border border-gray-200 hover:border-trust rounded-xl p-3 flex flex-col items-center justify-center gap-2 cursor-pointer transition">
+                        <span class="text-lg font-extrabold text-gray-600">SAM</span>
+                        <span class="text-xs font-semibold text-gray-600">Samsung</span>
+                    </div>
+                    <div class="border border-gray-200 hover:border-trust rounded-xl p-3 flex flex-col items-center justify-center gap-2 cursor-pointer transition">
+                        <i class="fa-brands fa-google text-2xl text-gray-600"></i>
+                        <span class="text-xs font-semibold text-gray-600">Google</span>
+                    </div>
+                    <div class="border border-gray-200 hover:border-trust rounded-xl p-3 flex flex-col items-center justify-center gap-2 cursor-pointer transition">
+                        <span class="text-lg font-extrabold text-gray-600">MI</span>
+                        <span class="text-xs font-semibold text-gray-600">Xiaomi</span>
+                    </div>
+                    <div class="border border-gray-200 hover:border-trust rounded-xl p-3 flex flex-col items-center justify-center gap-2 cursor-pointer transition">
+                        <span class="text-lg font-extrabold text-gray-600">1+</span>
+                        <span class="text-xs font-semibold text-gray-600">OnePlus</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Selection -->
+            <div class="mb-8">
+                <label class="block text-sm font-bold text-gray-700 mb-3">2. Select Model</label>
+                <select class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-base font-medium outline-none focus:border-trust focus:ring-2 focus:ring-trust/20 transition">
+                    <option value="" disabled selected>Choose a model...</option>
+                    <option value="14pm">iPhone 14 Pro Max</option>
+                    <option value="14p">iPhone 14 Pro</option>
+                    <option value="14">iPhone 14</option>
+                    <option value="13pm">iPhone 13 Pro Max</option>
+                </select>
+            </div>
+
+            <!-- Storage Selection (Dynamic based on model) -->
+            <div>
+                <label class="block text-sm font-bold text-gray-700 mb-3">3. Select Storage</label>
+                <div class="grid grid-cols-4 gap-3">
+                    <div class="border border-gray-200 text-gray-400 bg-gray-50 rounded-xl py-3 text-center text-sm font-semibold cursor-not-allowed">64 GB</div>
+                    <div class="border-2 border-trust bg-teal-50 text-trust rounded-xl py-3 text-center text-sm font-bold cursor-pointer">128 GB</div>
+                    <div class="border border-gray-200 hover:border-trust rounded-xl py-3 text-center text-sm font-semibold cursor-pointer transition">256 GB</div>
+                    <div class="border border-gray-200 hover:border-trust rounded-xl py-3 text-center text-sm font-semibold cursor-pointer transition">512 GB</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Action Button -->
+        <div class="flex justify-end">
+            <button class="bg-trust hover:bg-trustHover text-white px-8 py-3.5 rounded-xl font-bold text-lg shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                Next Step <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+    </main>
+
+</body>
+</html>

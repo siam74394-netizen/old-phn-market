@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - TruePhone BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { trust: '#0F766E', trustHover: '#0D9488', dark: '#1F2937', surface: '#F9FAFB' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-dark font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer">
+                <div class="bg-trust text-white p-1.5 rounded flex items-center justify-center w-8 h-8">
+                    <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-dark mt-1">TruePhoneBD</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-semibold text-gray-500 hover:text-dark transition">Back to Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-[1200px] mx-auto px-6 py-10 flex flex-col md:flex-row gap-8">
+        
+        <!-- Left Sidebar: Settings Navigation -->
+        <aside class="w-full md:w-64 flex-shrink-0">
+            <h2 class="text-2xl font-extrabold text-dark mb-6">Settings</h2>
+            <nav class="space-y-1">
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-teal-50 text-trust font-bold transition">
+                    <i class="fa-regular fa-user w-5"></i> Profile Details
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-dark font-medium transition">
+                    <i class="fa-solid fa-shield-halved w-5"></i> Security & Login
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-dark font-medium transition">
+                    <i class="fa-regular fa-bell w-5"></i> Notifications
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-dark font-medium transition">
+                    <i class="fa-regular fa-credit-card w-5"></i> Payout Methods
+                </a>
+                <div class="h-px bg-gray-200 my-4"></div>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 font-medium transition">
+                    <i class="fa-solid fa-trash-can w-5"></i> Delete Account
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Settings Content -->
+        <main class="flex-1">
+            <div class="bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden">
+                
+                <!-- Section Header -->
+                <div class="px-8 py-6 border-b border-gray-200">
+                    <h3 class="text-xl font-bold text-dark">Profile Details</h3>
+                    <p class="text-sm text-gray-500 mt-1">Update your personal information and public profile.</p>
+                </div>
+
+                <div class="p-8">
+                    <!-- Avatar Upload -->
+                    <div class="flex items-center gap-6 mb-8 pb-8 border-b border-gray-100">
+                        <div class="relative">
+                            <img src="https://ui-avatars.com/api/?name=Rakib+Hasan&background=0F766E&color=fff&size=100" class="w-24 h-24 rounded-full border-4 border-white shadow-md" alt="Avatar">
+                            <button class="absolute bottom-0 right-0 w-8 h-8 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:text-trust shadow-sm transition">
+                                <i class="fa-solid fa-camera text-xs"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">Profile Photo</h4>
+                            <p class="text-xs text-gray-500 mt-1 mb-3">PNG or JPG no larger than 5MB.</p>
+                            <div class="flex gap-3">
+                                <button class="bg-gray-100 hover:bg-gray-200 text-dark px-4 py-2 rounded-lg text-sm font-semibold transition">Upload New</button>
+                                <button class="bg-white border border-gray-200 hover:bg-red-50 hover:text-red-600 text-gray-600 px-4 py-2 rounded-lg text-sm font-semibold transition">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Info Form -->
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">First Name</label>
+                                <input type="text" value="Rakib" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-trust focus:ring-2 focus:ring-trust/20 transition font-medium">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Last Name</label>
+                                <input type="text" value="Hasan" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-trust focus:ring-2 focus:ring-trust/20 transition font-medium">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+                            <div class="relative">
+                                <input type="email" value="rakib.hasan@example.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-trust transition font-medium text-gray-500 bg-gray-50" readonly>
+                                <button type="button" class="absolute right-4 top-3.5 text-sm font-bold text-trust hover:underline">Change</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Mobile Number <span class="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded ml-2 uppercase tracking-wider font-bold">Verified</span></label>
+                            <input type="tel" value="+880 1711 223344" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 outline-none text-gray-500 font-medium cursor-not-allowed" readonly>
+                            <p class="text-xs text-gray-400 mt-2"><i class="fa-solid fa-circle-info"></i> Mobile number cannot be changed as it is linked to your NID verification.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">City</label>
+                                <select class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-trust transition font-medium text-dark">
+                                    <option selected>Dhaka</option>
+                                    <option>Chattogram</option>
+                                    <option>Sylhet</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Area / Location</label>
+                                <select class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-trust transition font-medium text-dark">
+                                    <option selected>Dhanmondi</option>
+                                    <option>Gulshan</option>
+                                    <option>Mirpur</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex justify-end">
+                            <button type="button" class="bg-trust hover:bg-trustHover text-white px-8 py-3.5 rounded-xl font-bold shadow-md transition transform hover:-translate-y-0.5">
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Security Callout -->
+            <div class="mt-8 bg-blue-50 border border-blue-100 rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-900">Two-Factor Authentication (2FA)</h4>
+                        <p class="text-sm text-blue-700 mt-1">Protect your account and wallet with an extra layer of security.</p>
+                    </div>
+                </div>
+                <button class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold shadow-sm transition whitespace-nowrap">
+                    Enable 2FA
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
